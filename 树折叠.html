@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src="../2017-01-13/jquery/jquery-3.1.1.min.js"></script>
+	<script>
+           $(function(){
+           	 // ul>li 把所有的li列出来
+           	 // ul>li:has(ul) 把li列表中包含ul子元素的li赛选出来
+		     $('ul>li:has(ul)').click(function(event){
+		     	// event.target当前点击的元素
+		     	// 由于时间的冒泡，this可能是点击的元素也可能是自己的父元素，因为只是实现当前元素的处理，所以增加判断，当前点击的元素和当前处理的事件的元素是同一个的时候才发生折叠展开动画
+                if(event.target == this){	
+			    $(this).find('ul').toggle(500);
+                }
+		     })
+           })
+	</script>
+</head>
+<body>
+	<ul>
+		<li>第一级</li>
+		<li>第一级
+			<ul>
+				<li>第二级</li>
+				<li>第二级</li>
+				<li>第二级</li>
+				<li>第二级
+					<ul>
+						<li>第三级</li>
+						<li>第三级</li>
+						<li>第三级</li>
+						<li>第三级</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>第一级</li>
+		<li>第一级
+			<ul>
+				<li>第二级</li>
+				<li>第二级</li>
+				<li>第二级</li>
+				<li>第二级
+					<ul>
+						<li>第三级</li>
+						<li>第三级</li>
+						<li>第三级</li>
+						<li>第三级</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
