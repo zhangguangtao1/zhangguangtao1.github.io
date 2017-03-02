@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+		
+	
+	
+	<!-- loop 循环播放 controls 显示播放的控件 muted 静音 autoplay -->
+	<audio id="audio">
+		<source src="ToAlice.mp3">	
+	</audio>
+	<input id="range" type="range" name="" value="0" max="100" min="0" placeholder="">
+	<button type="button">播放</button>
+	<button type="button">静音</button>
+	<button type="button">up</button>
+	<button type="button">down</button>
+	<script>
+		window.onload = function(){
+			var range = document.getElementById('range');
+			var timer;
+			var audio = document.getElementById('audio');
+			var buttonList = document.getElementsByTagName('button');
+
+			function startTimer(){
+				clearInterval(timer);
+				timer = setInterval(function(){
+					var duration = audio.duration;
+					var per = audio.currentTime/duration;
+					var value = 100 * per;
+					range.value = value;
+
+					// 检查是否播放结束
+					if(audio.ended){
+						audio.pause();
+						audio.currentTime = 0;
+						audio.play();
+					}
+				},1000)
+				// 是否播放结束
+				// audio.ended   true 播放结束
+				// audio.error  true  错误
+				
+			}
+
+			function stopTimer(){
+				clearInterval(timer);
+			}
+			buttonList[0].onclick = function(){
+
+
+				if( audio.paused ){
+					// 判断是否处于暂停
+				audio.play();
+				this.innerHTML = '暂停';
+				startTimer();
+				}else{
+					audio.pause();
+					this.innerHTML = '播放';
+					stopTimer();
+				}
+			}
+			buttonList[1].onclick = function(){
+				// 不能直接设置属性实现静音
+				// audio.setAttribute('muted','');
+				audio.muted = !audio.muted;
+
+			}
+
+
+			buttonList[2].onclick = function(){
+				// 音量 audio.volumn[0,1]
+				var currentVolume = audio.volume;
+				if(currentVolume < 1.0){
+
+				currentVolume += 0.1;
+				}
+				// if(audio.volume >= 1.0){
+				// 	audio.volume = 1.0;
+				// }
+				audio.volume = currentVolume;
+			}
+			buttonList[3].onclick = function(){
+				// 音量 audio.volumn[0,1]
+				var currentVolume = audio.volume;
+				currentVolume -= 0.1;
+				if(currentVolume < 0){
+					currentVolume = 0;
+				}
+				// if(audio.volume >= 1.0){
+				// 	audio.volume = 1.0;
+				// }
+				audio.volume = currentVolume;
+			}
+
+			// 拖动处理
+			// onchange 只关注拖动开始的位置和最终的位置，如果不一致才触发该事件
+			// oninput 只要发生变化都会触发该事件
+			
+			range.oninput = function(){
+				// console.log(this.value);
+				var per = this.value/100;
+				// 计算时长的百分比
+				// 音频中市场
+				var time = audio.duration * per;
+				// 把计算的时间设置为当前的播放时间
+				audio.currentTime = time;
+			}
+		}
+	</script>
+</body>
+</html>
