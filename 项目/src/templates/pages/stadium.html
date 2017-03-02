@@ -1,0 +1,113 @@
+<div ng-controller="stadiumCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img width="100%" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488034923325&di=3a0e8d6556feeec763b8bd9ba50a3fde&imgtype=0&src=http%3A%2F%2Fpic17.photophoto.cn%2F20101112%2F0033033979656240_b.jpg" alt="" />
+			</div>
+			<div class="col-md-6">
+				<h3>{{stadiuminfo.name}}</h3>
+				<p><i class="glyphicon glyphicon-map-marker"></i>{{stadiuminfo.address}}</p>
+				<div style="height: 100px;line-height: 100px;" class="row">
+					<div class="col-md-6">
+						<star score="num"></star>
+							
+					</div>
+					<div class="col-md-6">
+						<i class="glyphicon glyphicon-earphone"></i>
+						{{stadiuminfo.telephone}}
+					</div>
+				</div>
+				<div style="height: 100px;" class="row">
+					<div class="col-md-4">
+						<img src="http://www.1yd.me/images/new/like.png"/>
+					</div>
+					<div class="col-md-4">
+						<img src="http://www.1yd.me/images/new/look.png"/>
+					</div>
+					<div class="col-md-4">
+						<img src="http://www.1yd.me/images/new/evaluate.png"/>
+					</div>
+				</div>
+				<ul style="height: 100px;line-height: 100px;" class="list-unstyled venue-own list-inline">
+					<li><img src="http://www.1yd.me/images/new/WIFI.png" alt="" /></li>
+					<li><img src="http://www.1yd.me/images/new/bath.png" alt="" /></li>
+					<li><img src="http://www.1yd.me/images/new/park.png" alt="" /></li>
+					<li><img src="http://www.1yd.me/images/new/fitting.png" alt="" /></li>
+					<li><img src="http://www.1yd.me/images/new/kit.png" alt="" /></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div style="margin-top:30px;" class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="col-md-2 " ng-repeat="item in datelist|limitTo:5">
+					<button
+						 ng-class="{'btn-warning':currentday==item}"
+						 class="btn btn-block btn-default text-center">
+						{{item.w}}
+						<br />
+						{{item.d|date:'MM-dd'}}
+					</button>
+				</div>
+				<div class="col-md-2">
+					<button style="width:110px;height:48px" class="btn btn-block btn-default text-center">
+						预订更多
+					</button>
+				</div>
+				<div class="row">
+					<div class="text-right clearfix">
+						<div class="text-center pull-right">
+							<button class="btn btn-default col selected">
+								<i class="glyphicon glyphicon-ok"></i>
+							</button><br />
+							已选择场次
+						</div>
+						<div class="text-center pull-right">
+							<button class="btn btn-default col ordered active">
+							</button><br />
+							已预订
+						</div>
+						<div class="text-center pull-right">
+							<button class="btn btn-default col selected">
+								
+							</button><br />
+							可预订
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1 no-padding">
+					<div class="col"></div>
+					<div class="field_name" ng-repeat="item in stadiumfield">
+						{{item.field_name}}号场地
+					</div>
+				</div>
+				<!--field_wrapper 隐藏显示 出现滚动条-->
+				<div class="col-md-11 field_wrapper">
+					<!--stadiumfield[0].field_resource.length 表示8点到22点有多少个按钮 乘以82表示一个宽度为82-->
+					<div ng-style="{'width':stadiumfield[0].field_resource.length*82+'px'}">
+						<button class="btn btn-default col btn-clear" ng-repeat="item in stadiumfield[0].field_resource">{{item.start_period}}</button>
+					</div>
+					<div class="" ng-repeat="item in stadiumfield" ng-style="{'width':stadiumfield[0].field_resource.length*82+'px'}">
+						<button
+							 ng-click="setstatus(col)"
+							 ng-class="{'active':col.resource_status=='ordered','selected':col.resource_status=='selected'}"
+							 ng-repeat="col in item.field_resource"
+							 class="btn btn-default col">
+							<i ng-show="col.resource_status=='selected'" class="glyphicon glyphicon-ok"></i>
+							<span ng-show="col.resource_status=='free'">{{col.price/100}}</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="selected-wrap">
+					<p ng-repeat="item in selectedfield" ng-if="selectedfield.length">
+						<button class="btn btn-default">{{item.start_period}}--{{item.end_period}} {{item.field_name}}号场地 {{item.price/100}}元</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

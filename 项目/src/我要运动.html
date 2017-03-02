@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="ydapp" ng-controller="ydCtrl">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="static/css/yd.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我要运动</title>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="container">
+				<div class="navbar-header">
+						<div class="navbar-brand">
+							<a href="">
+								<img height="30px" src="http://www.1yd.me/images/new/logo.png"/>
+							</a>
+						</div>
+					</div>
+				<div class="navbar-right">
+					<ul class="nav navbar-nav">
+						<li><a href="#/home" ng-class="{'active':page.pageNum==1}">首页</a></li>
+						<li><a href="#/search" ng-class="{'active':page.pageNum==2}">订场</a></li>
+						<li><a href="">赛事</a></li>
+						<li><a href="">培训</a></li>
+						<li><a href="">登录</a></li>
+						<li><a href="#/regist" ng-class="{'active':page.pageNum==3}">注册</a></li>
+					</ul>	
+				</div>
+			</div>
+		</div>
+		<div ng-view>
+			
+		</div>
+		<div class="footer container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>联系</h3>
+					<div class="row">
+						<div class="col-md-8">
+							<p>公司：上海天健体育科技发展有限公司</p>
+							<p>地址：上海市淞沪路161号中环国际大厦14楼</p>
+							<p>客服电话：400-921-6990</p>
+							<p>合作邮箱：app@1yd.me</p>
+						</div>
+						<div class="col-md-4">
+							<img width="100px" src="http://www.1yd.me/images/weixin.jpg"/>
+						</div>
+					</div>
+					<p>加盟热线：400-921-6990（ 7*12小时在线，9点至21点 ）</p>
+					<p>微信公众号：我要运动（ 关注微信公众号，点击在线客服进行咨询 ）</p>
+					<p>邮箱：houping@1yd.me</p>
+					<p>版权所有：上海天健体育科技发展有限公司 沪ICP备14034023号-1</p>
+				</div>
+				<div class="col-md-4 col-md-offset-2">
+					<div class="row form-group">
+						<div class="col-md-2 text-right">姓名</div>
+						<div class="col-md-10">
+							<input type="text" class="form-control"/>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-md-2 text-right">邮箱</div>
+						<div class="col-md-10">
+							<input type="text" class="form-control"/>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-md-2 text-right">电话</div>
+						<div class="col-md-10">
+							<input type="text" class="form-control"/>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-md-2 text-right">备注</div>
+						<div class="col-md-10">
+							<textarea name="" rows="5" class="form-control"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-10 col-md-offset-2 form-group">
+							<input class="form-control no-padding btn btn-block btn-success" type="button" value="提交"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="libs/angular/angular.min.js"></script>
+		<script src="libs/jquery/jquery-2.1.0.js"></script>
+		<script src="libs/angular/angular-route.js"></script>
+		<script src="libs/angular/angular-animate.min.js"></script>
+		<script src="libs/bootstrap/js/bootstrap.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+</html>
