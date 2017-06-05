@@ -107,7 +107,7 @@ body{
 }
 //视频弹窗
 .zhezhao{position: fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.5);left:0;top:0;}
-.video{left:50%;top:50%;height:px2rem(498);width:px2rem(510);margin-left:px2rem(-255);margin-top:px2rem(-249);z-index:1000000}
+.video{left:0;top:0;right:0;bottom:0;height:px2rem(498);width:px2rem(510);margin-left:auto;margin-top:auto;margin-right:auto;margin-bottom:auto;z-index:1000000}
 .video,.zhezhao{position:fixed;display: none;}
 .hid{width:px2rem(20);height:px2rem(20);font-size:px2rem(27);line-height:px2rem(20);text-align:center;position:absolute;right:px2rem(-27);top:px2rem(-20);color:#fff}
 
