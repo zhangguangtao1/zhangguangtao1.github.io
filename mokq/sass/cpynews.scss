@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@import '_px2rem';
+$designWidth : 640;
+body{
+  width: 16rem;
+  margin: 0 auto;
+}
+.companyNews{
+    .header{height:px2rem(88);width:100%;padding:px2rem(20) px2rem(30);border-bottom:1px solid #d9d8d8;text-align:justify;
+        li{display:inline-block;width:px2rem(128);height:px2rem(44);text-align: center;line-height:px2rem(44);font-size:px2rem(22);border:1px solid #a3a3a3;border-radius:px2rem(5);;}
+        .left_fix{border:none;height: 0; padding: 0; overflow: hidden;}
+    }
+
+    ul{width:100%;padding:px2rem(10) px2rem(30);display:block;
+        li{margin-top:px2rem(40);
+            .left{float:left;width:px2rem(444);
+                .con-up{color:#333333;font-size:px2rem(20);line-height:px2rem(60)}
+                .con-down{color:#999999;font-size:px2rem(20);}
+            }
+            img{float:right;width:px2rem(106);height:px2rem(80);}
+        }
+    }
+    .content01{display: block;
+        .content01-header{border-bottom:1px dashed #a3a3a3;margin-bottom:px2rem(20);
+            h1{font-size: px2rem(30);text-align:center;margin-top:px2rem(40);margin-bottom:px2rem(20)}
+            p{font-size:px2rem(18);color:#a9a9a9;text-align: center;margin-bottom:px2rem(30)}
+        }
+        p{line-height: px2rem(30);font-size: px2rem(22);margin-bottom:px2rem(40)}
+        img{width:px2rem(460);height:px2rem(307);margin:px2rem(30) px2rem(52);}
+        a{font-size:px2rem(20);}
+    }
+    .on{color:white;background-color: #247ef2;}
+    .content04{
+        li{margin-top:px2rem(40);
+            img{float:left;margin-right:px2rem(30);width:px2rem(274);height:px2rem(192);}
+            .right{float:left;width:px2rem(262);
+               h2{font-size:px2rem(20);margin-bottom:px2rem(24)}
+               p{line-height:px2rem(30);font-size:px2rem(18);color:#9b9b9b;}
+               a{color:#0f69dc;border-bottom:1px solid #0f69dc;font-size:px2rem(20);
+                    i{color:#0f69dc;}
+               }
+            }
+        }
+    }
+    .share{margin:0 px2rem(30);border-bottom:1px solid #d0d0d0;padding-bottom:px2rem(20)}
+}

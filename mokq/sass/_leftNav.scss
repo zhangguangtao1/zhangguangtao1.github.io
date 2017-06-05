@@ -1,0 +1,27 @@
+/*-- 左侧导航  --*/
+.navMain{
+           background-color:#2e2e2e;overflow:hidden;width:100%;position:fixed;right:px2rem(-750);top:0rem;z-index:9999;-webkit-overflow-scrolling:touch;overflow-y:auto;
+           span{position:absolute;right:px2rem(20);top:px2rem(20);color:#fff;font-size:px2rem(45);}
+        }
+.leftNav{
+          height:100%;overflow:hidden;width:100%;padding:px2rem(70) px2rem(20) 0;float:right;
+          li{
+              height:px2rem(80);overflow:hidden;
+              h3{
+                  font-size:px2rem(26);line-height:px2rem(80);height:px2rem(80);overflow:hidden;border-bottom:1px solid #E4E4E4;margin-bottom:px2rem(16);
+                  >a{display:inline-block;width:px2rem(150);color:#fff;line-height:px2rem(80);}
+                  i{
+                      width:px2rem(40);height:px2rem(40);float:right;display:block;background:url(../imgs/add.jpg) no-repeat scroll center center;margin-top:px2rem(16);                   
+                   }
+                }
+               &.cur{
+                      height:auto;
+                      i{background:url(../imgs/redu.jpg) no-repeat scroll center center;}
+                    }
+                 >a{
+                      display:block;font-size:px2rem(24);line-height:px2rem(60);color:#fff;position:relative;padding-left:px2rem(40);               
+                    }
+          
+        }
+    
+    } 
