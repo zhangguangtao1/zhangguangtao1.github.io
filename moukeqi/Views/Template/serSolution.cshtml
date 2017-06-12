@@ -1,0 +1,39 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/server.css" type="text/css" />
+}
+<div class="solution">
+    	<div class="header clearfix">
+    		<a href="/serPromise">服务承诺</a>
+    		<a href="/serTrain">培训服务</a>
+    		<a href="/serVideo">培训视频</a>
+    		<a class="on" href="/serSolution">解决方案</a>
+            <a href="/problem"><li>常见问题</li></a>
+    		<a href="/serReservation">服务预约</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    	</div>
+    	<div class="solution-content">
+            @foreach(var item in cms.typelist())
+            {
+    		<div class="title clearfix">
+    			<p>@item.name</p>
+    			<a href="/ser-solu-list/@item.id">更多+</a>
+    		</div>
+    		<div class="so-con">
+                @foreach(var i in cms.list(item.id,3).list)
+                {
+    			<li class="clearfix">
+    				<div class="left">
+	    				<p><a href="/serDetail/@item.id">@i.title</a></p>
+	    				<span>作者: @i.author   @i.publishtime</span>
+	    			</div>
+	    			<a href="/serDetail/@item.id"><img src="@i.img"/></a>
+    			</li>
+                }
+    		</div>
+            }
+    	</div>
+    </div>
+</div>

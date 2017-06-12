@@ -1,0 +1,78 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/product.css" type="text/css" />
+}
+  <div class="proDetail">  
+      <div id="focus" class="focus">
+			<div class="hd">
+			    <ul></ul>
+			</div>
+			<div class="bd">
+			    <ul>
+                     @foreach (var item in Model.imgs){            
+			        <li><a><img _src="@item" src="@item" /></a></li>}
+			    </ul>
+			</div>
+		</div>
+		<p>@Model.title</p>
+		<div class="button">
+			<a class="ask" href="http://p.qiao.baidu.com/cps/chatIndex?reqParam=%7B%22from%22%3A1%2C%22sessionid%22%3A%22-100%22%2C%22siteId%22%3A%2210603611%22%2C%22tid%22%3A%22-1%22%2C%22userId%22%3A%225557159%22%2C%22ttype%22%3A1%7D">立即咨询</a>
+			<a class="buy" href="/line-buy">立即订购</a>
+		</div>
+      <div class="parames">
+            <div class="para-content">
+				<div class="title">
+					<h2>产品简介</h2>
+				</div>
+				<div class="explain">
+					<p class="title">型号规格:</p>
+					<p>标准型/OK-Q3S/微电脑土壤（肥料）养分速测仪 </p>
+					<p class="title">检测项目：</p>
+					<p>土壤养分、中微量元素、肥料养分、植株养分、烟叶养分</p>
+					<p class="title">性能特点:</p>
+					<p>标准型/OK-Q3S/微电脑土壤（肥料）养分速测仪标准型/OK-Q3S/微电脑土壤（肥料）养分速测仪标准型/OK-Q3S/微电脑土壤（肥料）养分速测仪标准型/OK-Q3S/微电脑土壤（肥料）养分速测仪标准型/OK-Q3S/微电脑土壤（肥料）养分速测仪标准型/OK-Q3S/微电脑土壤（肥料）养分速测仪 </p>
+					<p class="title">仪器配置：</p>
+					<p>土壤养分、中微量元素、肥料养分、植株养分、烟叶养分土壤养分、中微量元素、肥料养分、植株养分、烟叶养分土壤养分、中微量元素、肥料养分、植株养分、烟叶养分</p>
+					<p class="title">订购热线:</p>
+					<p>400-669-0568 </p>
+				</div>
+			</div>
+            @Html.Raw(Model.htmlcontent)
+        <div class="about-product">
+        <div class="title">
+            <h2>
+                相关产品
+            </h2>
+        </div>
+        <div class="products">
+            <ul class=" list-paddingleft-2">
+                 @foreach(var item in cms.siblingslist(Model.id,Model.t,3).list)
+                {
+                <li>
+                    <p>
+                        <a href="/proDetail/@item.id"><img src="/imgs/products1.jpg" /></a>
+                    </p>
+                    <p>
+                        <a href="/proDetail/@item.id">OK-ZSP96综合食品安 全检测仪</a>
+                    </p>
+                    <p>
+                        <br />
+                    </p>
+                </li>
+                 }
+            </ul>
+        </div>
+    </div>
+      </div>
+  </div>
+    
+    <script>
+        TouchSlide({
+            slideCell: "#focus",
+            titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+            mainCell: ".bd ul",
+            effect: "left",
+            autoPlay: true,//自动播放
+            autoPage: true, //自动分页
+            switchLoad: "_src" //切换加载，真实图片路径为"_src" 
+        });
+    </script>

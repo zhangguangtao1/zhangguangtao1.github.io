@@ -1,0 +1,80 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/honor.css" type="text/css" />
+}
+<div class="honor">
+    	<div class="header clearfix">
+    		<a href="/qualifty">企业资质</a>
+    		<a href="/proQualifty">产品资质</a>
+    		<a class="on" href="/cpyQualifty">企业荣誉</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    	</div>
+    	<div class="honor-content">
+    		
+    		<div class="ph-live">
+                @foreach (var item in Model.list)
+            {
+    			<li>
+    				<div><img src="@item.img"/></div>
+    				<p>@item.title</p>
+    			</li>
+                }
+    			<li class="left_fix">
+    				&nbsp;
+    			</li>
+    			<li class="left_fix">
+    				&nbsp;
+    			</li>
+    		</div>
+    		
+    		<div class="share">
+					<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+					<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>    		
+    			</div>
+		    	<a href="/cpyNewDetail?title=郑州欧柯奇与河南农业大学">延伸阅读:郑州欧柯奇与河南农业大学 </a>
+    		</div>
+    </div>
+    <div class="zhezhao">
+	<div class="showBigImg">
+		<li></li>
+		<i class="iconfont special-i" style="width:30px;height:30px;font-size:25px;line-height:30px;text-align: center;color:white;position:absolute;right:-35px;top:0px;">&#xe62a;</i>
+		<div class="showBigImg-left">
+			<i class="iconfont">&#xe606;</i>
+		</div>
+		<div class="showBigImg-right">
+			<i class="iconfont">&#xe60e;</i>
+		</div>
+	</div>
+</div>
+    <script>
+        $(".honor .honor-content .ph-live li").click(function () {
+            var index = $(this).index();
+            $(".zhezhao").css("display", "block");
+            var content = $(this).find("div").html();
+            $(".showBigImg li").html(content);
+            $(".zhezhao .showBigImg li>img").css("width", "9.5rem");
+
+            $(".showBigImg-right i").on("click", function () {
+                if (index == 5) {
+                    return;
+                }
+                var content = $(".honor .honor-content .ph-live li").eq(index + 1).find("div").html();
+                $(".showBigImg li").html(content);
+                $(".zhezhao .showBigImg li>img").css("width", "9.5rem");
+                index++;
+            })
+
+            $(".showBigImg-left i").on("click", function () {
+                if (index == 0) {
+                    return;
+                }
+                var content = $(".honor .honor-content .ph-live li").eq(index - 1).find("div").html();
+                $(".showBigImg li").html(content);
+                $(".zhezhao .showBigImg li>img").css("width", "9.5rem");
+                index--;
+            })
+        })
+
+        $(".zhezhao .showBigImg>i").click(function () {
+            $(".zhezhao").css("display", "none")
+        })
+    </script>

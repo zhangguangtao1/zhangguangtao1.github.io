@@ -1,0 +1,27 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/cpynews.css" type="text/css" />
+}
+<div class="companyNews">
+    	<div class="header clearfix">
+    		 @foreach (var item in cms.typelist(4171, "cpynews"))
+            {
+               <a href="@item.url"><li class="@cms.selected(item.id, "on")">@item.name</li></a> 
+            }
+    		<a href=""><li class="left_fix">&nbsp;</li></a>
+    	</div>
+    	<div class="cpy-content">
+	    	<ul class="content02">
+                @foreach (var item in Model.list)
+             {
+	    		<li class="clearfix">
+	    			<div class="left">
+	    				<p class="con-up"><a href="/cpynewDetail/@item.id">@item.title</a></p>
+	    				<p class="con-down">作者: 欧柯奇市场部   2017-05-20 15:10</p>
+	    			</div>
+	    			<a href="/cpynewDetail/@item.id"><img src="@item.img"/></a>
+	    		</li>
+                }
+                @Html.Raw(Model.pagebar)
+	    	</ul>
+    	</div>
+    </div>

@@ -1,0 +1,22 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/success.css" type="text/css" />
+}
+ <div class="success">
+    	<div class="header clearfix">
+    		<h2>成功案例</h2>
+    	</div>
+    	<div class="suc-content">
+	    	<ul class="content02">
+                @foreach (var item in Model.list)
+                {
+	    		<li class="clearfix">
+	    			<div class="left">
+	    				<p class="con-up"><a href="/successDetail/@item.id">@item.title</a></p>
+	    				<p class="con-down">作者: @item.author   @item.publishtime</p>
+	    			</div>
+	    			<a href="/successDetail/@item.id"><img src="@item.img"/></a>
+	    		</li>
+                }
+	    	</ul>
+    	</div>
+    </div>

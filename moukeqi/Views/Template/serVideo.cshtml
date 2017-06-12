@@ -1,0 +1,46 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/server.css" type="text/css" />
+}
+ <div class="ser-video">
+    	<div class="header clearfix">
+    		<a href="/serPromise">服务承诺</a>
+    		<a href="/serTrain">培训服务</a>
+    		<a class="on" href="/serVideo">培训视频</a>
+    		<a href="/serSolution">解决方案</a>
+            <a href="/problem"><li>常见问题</li></a>
+    		<a href="/serReservation">服务预约</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    	</div>
+    	<div class="video-content">
+    		<div class="ph-live">
+                @foreach (var item in Model.list)
+                {
+    			<li>
+    				<a href="/serDetail/@item.id"><img src="@item.img"/>
+    				<p>@item.title</p></a>
+    			</li>}
+    			<li class="left_fix">
+    				&nbsp;
+    			</li>
+    			<li class="left_fix">
+    				&nbsp;
+    			</li>
+    		</div>
+            @Html.Raw(Model.pagebar)
+        </div>
+    </div>
+    <div class="zhezhao">
+	<div class="showBigImg">
+		<li></li>
+		<i class="iconfont special-i" style="width:30px;height:30px;font-size:25px;line-height:30px;text-align: center;color:white;position:absolute;right:-35px;top:0px;">&#xe62a;</i>
+		<div class="showBigImg-left">
+			<i class="iconfont">&#xe606;</i>
+		</div>
+		<div class="showBigImg-right">
+			<i class="iconfont">&#xe60e;</i>
+		</div>
+	</div>
+</div>

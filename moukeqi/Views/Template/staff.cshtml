@@ -1,0 +1,46 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/about.css" type="text/css" />
+}
+<div class="staff">
+    	<div class="header clearfix">
+    		<a href="/aboutUs">企业简介</a>
+    		<a href="/history">发展历程</a>
+    		<a href="/photo">企业实景</a>
+    		<a class="on" href="/staff">员工风采</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    	</div>
+    	<div class="staff-content">
+    		<div class="content-header">
+    			<h1>欧柯奇员工风采</h1>
+    		</div>
+    		<div class="sta-live">
+                 @foreach (var item in Model.list)
+            {
+    			<li>
+                    <a href="/staffDetail/@item.id"><img src="@item.img" alt="" /></a>
+    				<p>@item.title</p>
+    				<a href="/staffDetail/@item.id">
+    					<i class="iconfont">&#xe600;</i>
+    					<span>查看相册</span>
+    				</a>
+    			</li>
+                 }
+    			<li class="left_fix">
+    				&nbsp;
+    			</li>
+    			<li class="left_fix">
+    				&nbsp;
+    			</li>
+    		</div>
+    		
+    		<div class="share">
+					<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+					<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>    		
+    			</div>
+		    	<a href="/cpyNewDetail?title=郑州欧柯奇与河南农业大学">延伸阅读:郑州欧柯奇与河南农业大学 </a>
+    		</div>
+    </div>
+   
+    <script>
+    	
+    </script>

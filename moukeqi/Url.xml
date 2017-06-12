@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <!-- 首页url不用配置-->
+  <!-- 示例
+  <item name="列表页" type="list" pagename="productlist" url="product/list/{t}/{p}" pagesize="3"></item>
+  <item name="详情页" type="detail" pagename="productdetail" url="product/detail/{id}"></item>
+  <item name="新闻列表页" type="list" pagename="productlist" url="news123/{p}" data="t:3793" pagesize="2"></item>
+  <item name="关于我们"  type="page" pagename="about" url="about" data="t:4167"></item>
+  
+  <item name="餐巾纸机系列" type="list" pagename="productlist" url="cjzxl" data="t:3795"></item>
+  -->
+  <!-- 关于我们 -->
+  <item name="关于我们"  type="page" pagename="aboutUs" url="aboutUs" data="t:4167"></item>
+  <item name="发展历程"  type="page" pagename="history" url="history" data="t:4168"></item>
+  <item name="企业实景" type="list" pagename="photo" url="photo/{p}" data="t:4169" pagesize="12"></item>
+  <item name="员工风采" type="list" pagename="staff" url="staff/{p}" data="t:4170" pagesize="10"></item>
+  <item name="员工风采详情页" type="detail" pagename="staffDetail" url="staffDetail/{id}"></item>
+  <!-- 新闻中心 -->
+  <item name="公司新闻" type="list" pagename="cpynews" url="cpynews/{p}" data="t:4172" pagesize="6"></item>
+  <item name="公司新闻详情页" type="detail" pagename="cpynewDetail" url="cpynewDetail/{id}"></item>
+  <item name="行业动态" type="list" pagename="cpywork" url="cpywork/{p}" data="t:4173" pagesize="6"></item>
+  <item name="食安常识" type="list" pagename="cpyfood" url="cpyfood/{p}" data="t:4174" pagesize="6"></item>
+  <item name="企业内刊" type="list" pagename="cpygroup" url="cpygroup/{p}" data="t:4175" pagesize="10"></item>
+  <item name="企业内刊详情页" type="detail" pagename="cpyNewDetail" url="cpygroupDetail/{id}"></item>
+  <!-- 产品中心 -->
+  <item name="产品中心" type="list" pagename="proferty" url="product" data="t:4187" pagesize="6"></item>
+  <item name="产品列表" type="list" pagename="proferty" url="proferty/{t}/{p}" data="t:4188" pagesize="6"></item>
+  <item name="产品详情页" type="detail" pagename="proDetail" url="proDetail/{id}"></item>
+  <item name="产品分类" type="list" pagename="profertytype" url="profertytype" data="t:4187"></item>
+  <item name="在线订购" type="page" pagename="line-buy" url="line-buy"></item>
+  <!-- 资质荣誉 -->
+  <item name="企业资质" type="list" pagename="qualifty" url="qualifty/{t}/{p}" data="t:4195" pagesize="6"></item>
+  <item name="产品资质" type="list" pagename="qualifty" url="proQualifty/{t}/{p}" data="t:4196" pagesize="6"></item>
+  <item name="企业荣誉" type="list" pagename="qualifty" url="cpyQualifty/{t}/{p}" data="t:4197" pagesize="6"></item>
+  <!-- 成功案例 -->
+  <item name="成功案例" type="list" pagename="caseList" url="caseList/{t}/{p}" data="t:4199" pagesize="6"></item>
+  <item name="成功案例详情页" type="detail" pagename="successDetail" url="successDetail/{id}"></item>
+  <!-- 客户服务 -->
+  <item name="服务承诺" type="page" pagename="serPromise" url="serPromise" data="t:4201"></item>
+  <item name="培训服务" type="list" pagename="serTrain" url="serTrain/{t}/{p}" data="t:4202" pagesize="6"></item>
+  <item name="培训视频" type="list" pagename="serVideo" url="serVideo/{t}/{p}" data="t:4203" pagesize="6"></item>
+  <item name="解决方案" type="list" pagename="serSolution" url="serSolution/{t}/{p}" data="t:4204" pagesize="4"></item>
+  <item name="解决方案列表" type="list" pagename="ser-solu-list" url="ser-solu-list/{t}/{p}" pagesize="8"></item>
+  <item name="常见问题" type="list" pagename="problem" url="problem/{t}/{p}" data="t:4336" pagesize="6"></item>
+  <item name="服务预约" type="page" pagename="serReservation" url="serReservation" data="t:4205"></item>
+  <item name="客户服务详情页" type="detail" pagename="serDetail" url="serDetail/{id}"></item>
+  <!-- 联系我们 -->
+  <item name="联系方式" type="page" pagename="conStyle" url="conStyle" data="t:4207"></item>
+  <item name="在线反馈" type="page" pagename="conMessage" url="conMessage" data="t:4208"></item>
+  <item name="人才招聘" type="list" pagename="conJob" url="conJob" data="t:4209" pagesize="9"></item>
+  <item name="人才招聘详情页" type="detail" pagename="conJobDetail" url="conJobDetail/{id}"></item>
+</Root>

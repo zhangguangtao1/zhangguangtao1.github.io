@@ -1,0 +1,13 @@
+.footer ul { width: 100%; height: px2rem(80); background-color: #4d85d1; padding: 0 px2rem(30); box-sizing: border-box; }
+.footer ul li:first-child a { border: none; }
+.footer ul li { float: left; text-align: center; width: px2rem(143); height: px2rem(60);position:relative;}
+.footer ul li a { display: block;  border-left: 1px solid #b8ceed;position:absolute;left:0;top:0.5rem;}
+.footer ul li a span { font-size: px2rem(18); color: white; display: block; margin-bottom: px2rem(6); }
+.footer ul li a i { font-size: px2rem(30); color: white; width: px2rem(143); display: inline-block; height: px2rem(30); }
+.footer p { width: 100%; text-align: center; line-height: px2rem(90); }
+.footer p a { font-size: px2rem(20); }
+.footer span { display: block; width: 100%; text-align: center; font-size: px2rem(20); color: #286bce; }
+.footer span a{color: #286bce; }
+.footer div { width: 100%; text-align: center; line-height: px2rem(60); font-size: px2rem(20); color: #999999; }
+
+/*# sourceMappingURL=footer.css.map */

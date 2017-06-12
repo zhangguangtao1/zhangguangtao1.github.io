@@ -1,0 +1,38 @@
+﻿@section css{
+    <link rel="stylesheet" href="/css/product.css" type="text/css" />
+}
+<div class="proList">
+    <form class="search" method="get" action="/proferty">
+        <input class="input1" type="text" name="title" placeholder="请输入产品关键词" />
+        <input class="input2 iconfont" type="submit" value="&#xe600;" />
+    </form>
+    <div class="proList-content">
+        <div class="header">
+            @{if (Request["title"] != null)
+              {
+                  <h1><span>关键词：</span><span>@Request["title"]</span> 共<span>@Model.totalcount</span>件商品</h1>
+              }
+              else
+              {
+                <h1>@Model.sname</h1>
+              }
+            }
+        </div>
+        <div class="listCon">
+            @foreach (var item in Model.list)
+            { 	<li>
+                    <a href="/proDetail/@item.id">
+                        <img src="@item.img"/>
+                        <p>@item.title</p>
+                    </a>
+                </li>
+            }
+
+            <li class="left_fix">&nbsp;
+            </li>
+            <li class="left_fix">&nbsp;
+            </li>
+            @Html.Raw(Model.pagebar)
+        </div>
+    </div>
+</div>

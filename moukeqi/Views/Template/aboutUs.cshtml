@@ -1,0 +1,64 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/about.css" type="text/css" />
+}
+<!--焦点图-->
+ <div class="about">
+    	<div class="header clearfix">
+    		<a class="on" href="/aboutUs">企业简介</a>
+    		<a href="/history">发展历程</a>
+    		<a href="/photo">企业实景</a>
+    		<a href="/staff">员工风采</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    	</div>
+    	<div class="about-content">
+    		<div class="content-header">
+    			<h1>@Model.title</h1>
+    		</div>
+    		 <div class="profile">
+    			<p class="title">公司简介</p>
+    			<p>郑州欧柯奇仪器制造有限公司位于郑州高新技术产业开发区翠竹街1号企业总部基地28号楼、29号楼，是一家通过经济发展局立项、环保局审批专业从事食品检测、农业物联网仪器研发、生产和销售的高新技术企业。</p>
+    			<p>自2008年成立以来一直致力于食品安全检测和现代物联网智能测控系统的发展与研究，依托雄厚的科研实力、丰富的实践经验不断创新，研发了众多技术产品并获得了98项国家专利产权。其中发明专利11项、实用新型专利48项、外观专利7项、计算机软件著作权32项。产品已通过国家农机具质量监督检验中心、国家植保机械质量监督检验中心、河南省质量技术监督检验局、河南省计量研究院、河南电子产品监督检验中心等检验并取得合格检测报告。</p>
+    		</div>	
+    		<img src="/imgs/about/about1.jpg"/>
+    		<div class="sat">
+    			<p class="title">科技研发</p>
+    			<p>公司成立了硬件研发中心、软件研发中心、试剂研发中心、物联网研发中心等4个研发中心，汇聚了同领域同行业的高精尖人才，并与河南省农科院、广东省农科院、郑州大学、河南农业大学、河南工业大学、郑州市农科所等单位合作，取得了可喜可贺的成果。公司坚持每年拿出10%以上的销售额作为研发费用，为公司的可持续发展，实现技术创新奠定坚实基础。</p>
+    			<p>欧柯奇始终坚持“致力于中国食品检测与农业物联网仪器的发展，开创中国食品检测与农业物联网仪器创新品牌”的企业愿景。通过不懈努力，公司成为高新技术企业、双软企业、国家AAA级信用企业，并通过ISO9001：2008质量管理体系、ISO14001：2004环境管理体系、职业健康管理体系、CE欧盟标准等认证，并已获得河南省科技小巨人、河南省大众创业扶持单位、郑州市创新型试点企业、郑州市重点实验室、河南省科技型龙头企业等项目的资金支持，是郑州市高新区政府重点孵化培育企业。欧柯奇品牌已成为中国同领域同行业的知名品牌。</p>
+    			<p>把自己当做客户，把客户当做自己，把产品当做艺术品。欧柯奇始终坚持“不惜一切代价做售后”的原则，为客户提供踏实、放心的全方位服务普惠更多的人和事。</p>
+    			
+    		</div>
+    		<div class="culture">
+    			<p class="title">企业文化</p>
+    			<span>我们的员工：始于氛围 陷于机制 忠于文化</span>
+    			<span>我们的产品：始于品质 陷于价值 胜于服务</span>
+    			<span>我们的目标：开创中国食品检测、农业物联网仪器创新型品牌</span>
+    			<span>我们的责任：普惠更多的人和事</span>
+    			<span>我们的愿景：致力于中国食品检测与农业物联网仪器的发展，开创中国食品检测与农业物联网仪器创新型品牌</span>
+    		</div>
+    		<div class="public">
+    			<p class="title">宣传视频</p>
+    			<img src="imgs/about.jpg" />
+    		</div>
+    		<div class="share">
+					<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+					<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>    		
+    			</div>
+		    	<a href="/cpyNewDetail?title=郑州欧柯奇与河南农业大学">延伸阅读:郑州欧柯奇</a>
+    		</div>
+    </div>
+   <div class="zhezhao"></div>
+	<div class="video">
+		<div class="hid">
+			×</div>
+		<iframe height=498 width=510 src='http://player.youku.com/embed/XMjYzMzU1MzU5Ng==' frameborder=0 'allowfullscreen'></iframe>
+	</div>
+	<script>
+	    $(".about .about-content .public img").click(function () {
+	        $(".video").css("display", "block");
+	        $(".zhezhao").css("display", "block")
+	    })
+	    $(".hid").click(function () {
+	        $(".video").css("display", "none");
+	        $(".zhezhao").css("display", "none")
+	    })
+	</script>

@@ -1,0 +1,23 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/product.css" type="text/css" />
+}
+<div class="allPro">
+    	<form class="search" method="get" action="/proferty">
+    		<input class="input1" type="text" name="title" placeholder="请输入产品关键词"/>
+    		<input class="input2 iconfont" type="submit" value="&#xe600;"/>
+    	</form>
+    	<div class="allPro-content">
+            @foreach (var item in cms.typelist(4187, "proferty"))
+           {
+    		<div class="content-title">
+    			<span>@item.name</span>
+    		</div>
+    		<div class="sundry clearfix">
+                 @foreach (var i in cms.typelist(item.id,"proferty"))
+                        {
+						<a href="@i.url">@i.name</a>
+                        }
+    		</div>
+            }
+    	</div>	
+    </div>

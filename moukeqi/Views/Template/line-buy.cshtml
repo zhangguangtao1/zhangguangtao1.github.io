@@ -1,0 +1,25 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/product.css" type="text/css" />
+}
+ <div id="tiantisForm">
+ </div>
+    <p>温馨提示：我们会在一到两个工作日与你联系</p>
+        <script type="text/javascript" src="/js/jquery.js" ></script>
+        <script src="http://form.tiantis.com/js/tiantisjs/tiantisform.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function () {
+                initForm("3AVn6b", 'cn');
+            });
+            $("#tiantisForm").append("<p>温馨提示：我们会在一到两个工作日与你联系</p>")
+        </script>
+    <script>
+        TouchSlide({
+            slideCell: "#focus",
+            titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+            mainCell: ".bd ul",
+            effect: "left",
+            autoPlay: true,//自动播放
+            autoPage: true, //自动分页
+            switchLoad: "_src" //切换加载，真实图片路径为"_src" 
+        });
+    </script>

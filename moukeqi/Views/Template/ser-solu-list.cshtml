@@ -1,0 +1,38 @@
+﻿@section css{
+<link rel="stylesheet" href="/css/success.css" type="text/css" />
+<link rel="stylesheet" href="/css/server.css" type="text/css" />
+}
+    <div class="ser-video">
+    	<div class="header clearfix">
+    		<a href="/serPromise">服务承诺</a>
+    		<a href="/serTrain">培训服务</a>
+    		<a href="/serVideo">培训视频</a>
+    		<a class="on" href="/serSolution">解决方案</a>
+            <a href="/problem"><li>常见问题</li></a>
+    		<a href="/serReservation">服务预约</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    		<a class="left_fix" href="">&nbsp;</a>
+    </div>
+    </div>
+ <div class="success">
+    	<div class="header clearfix">
+    		<h2>@Model.sname</h2>
+    	</div>
+    	<div class="suc-content">
+	    	<ul class="content02">
+                @foreach (var item in Model.list)
+                {
+	    		<li class="clearfix">
+	    			<div class="left">
+	    				<p class="con-up"><a href="/serDetail/@item.id">@item.title</a></p>
+	    				<p class="con-down">作者: @item.author   @item.publishtime</p>
+	    			</div>
+	    			<a href="/serDetail/@item.id"><img src="@item.img"/></a>
+	    		</li>
+                }
+	    	</ul>
+            @Html.Raw(Model.pagebar)
+    	</div>
+    </div>
