@@ -1,0 +1,18 @@
+body { width: 16rem; margin: 0 auto; background-color: #000; }
+
+.swiper-container { width: 16rem; height: 7rem; position: absolute !important; left: 0; top: 50%; margin-top: -3.5rem; z-index: 100; }
+.swiper-container .swiper-wrapper { width: 16rem; height: 7rem; }
+.swiper-container .swiper-wrapper .swiper-slide { width: 16rem; height: 7rem; text-align: center; }
+.swiper-container .swiper-wrapper .swiper-slide img { width: 16rem; height: 7rem; }
+
+.number1 { font-size: 1rem; color: #fff; width: 3rem; position: absolute; left: 50%; margin-left: -0.75rem; bottom: 5rem; }
+.number1 span { color: #fff; font-size: 1rem; }
+
+.container { padding: 0 0.75rem; margin-top: 12.5rem; text-align: justify; font-size: 0; }
+.container li { display: inline-block; vertical-align: top; width: 4.825rem; }
+.container li a { display: block; }
+.container li a img { width: 4.825rem; }
+.container li.left_fix { height: 0; padding: 0; margin: 0; overflow: hidden; }
+.back{color:#fff;display: block;position: absolute;right:0.75rem;top:0.75rem;}
+.back a{color:#fff;}
+/*# sourceMappingURL=index.css.map */

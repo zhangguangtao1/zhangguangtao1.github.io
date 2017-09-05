@@ -1,0 +1,75 @@
+* { word-break: break-word; }
+
+body, dd, dl, h1, h2, h3, h4, h5, h6, ol, p, ul { margin: 0; }
+
+b, em { font-style: normal; font-weight: normal; }
+
+ol, ul { padding: 0; }
+
+li, ul { list-style: none; }
+
+body { font-family: "\9ED1\4F53","\5FAE\8F6F\96C5\9ED1",Arial; color: #333; margin: 0 auto; }
+
+img { border: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; touch-callout: none; }
+
+table { border-spacing: 0; border-collapse: collapse; }
+
+html { font-family: sans-serif; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+:focus { outline: 0; }
+
+:link, :visited { text-decoration: none; }
+
+a { outline: none; text-decoration: none; cursor: pointer; color: #333; }
+
+a:active, a:hover { outline: 0; }
+
+a:hover { text-decoration: none; outline: none; }
+
+.clearfix:after { display: block; clear: both; height: 0; font-size: 0; content: ''; }
+
+* { box-sizing: border-box; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+
+input[type="search"] { -webkit-appearance: textfield; box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+button { overflow: visible; }
+
+button, select { text-transform: none; }
+
+input { line-height: normal; }
+
+input::-webkit-input-placeholder { color: #999 !important; font-family: "\9ED1\4F53"; }
+
+.left_fix { height: 0 !important; padding: 0; overflow: hidden; }
+
+.share { margin: 0 0.75rem; margin-top: 1.75rem; height: 1.5rem; border-bottom: 1px solid #d0d0d0; background-color: #fff; }
+
+.recommend { padding: 0 0.75rem; margin-top: 0.575rem; padding-bottom: 0.9rem; border-bottom: 1px solid #d6d6d6; }
+.recommend > p { float: left; font-size: 0.6rem; color: #494949; }
+.recommend .right { float: left; width: 9.6rem; height: 0.675rem; overflow: hidden; }
+.recommend .right a { display: block; font-size: 0.6rem; color: #333333; }
+
+.page { padding: 0 0.75rem; overflow: hidden; background-color: #fff; padding-bottom: 0.875rem; border-bottom: 1px solid #d0d0d0; }
+.page li { margin-top: 0.6rem; }
+.page li a { display: block; font-size: 0.6rem; color: #333333; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@font-face { font-family: 'iconfont';
+  /* project id 345650 */
+src: url("//at.alicdn.com/t/font_7qh86akbrxnoecdi.eot"); src: url("//at.alicdn.com/t/font_7qh86akbrxnoecdi.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_7qh86akbrxnoecdi.woff") format("woff"), url("//at.alicdn.com/t/font_7qh86akbrxnoecdi.ttf") format("truetype"), url("//at.alicdn.com/t/font_7qh86akbrxnoecdi.svg#iconfont") format("svg"); }
+.iconfont { font-family: "iconfont" !important; font-size: 16px; font-style: normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale; }
+
+.pageList { text-align: center; margin: 1rem 0; height: 1rem; font-size: 0; }
+
+.pageList a { display: inline-block; width: 1rem; height: 1rem; line-height: 1rem; text-align: center; color: #747474; border: 1px solid #dddddd; font-size: 0.5rem; vertical-align: bottom; border-radius: 0.2rem; margin: 0 0.125rem; }
+
+.pageList > .lastPage { display: inline-block; width: 2rem; height: 1rem; line-height: 1rem; text-align: center; color: #a1a1a1; border: 1px solid #f4e4bd; font-size: 0.5rem; vertical-align: bottom; border-radius: 0.2rem; }
+
+.pageList .current { display: inline-block; width: 1rem; height: 1rem; line-height: 1.06rem; text-align: center; color: #a1a1a1; background-color: #ff7700; font-size: 0.5rem; vertical-align: bottom; border: 1px solid #f4e4bd; border-radius: 0.2rem; margin: 0 0.125rem; }
+
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,773 @@
+body {
+	width: 16rem;
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 0.4rem;
+	font-family: "microsoft yahei";
+}
+
+.clearfix:after {
+	height: 0;
+	display: block;
+	clear: both;
+	overflow: hidden;
+	content: "";
+}
+
+html,
+body {
+	height: 100%;
+}
+
+ul,
+li {
+	list-style-type: none;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.content-wrape {
+	position: relative;
+	height: 100%;
+	width: 300%;
+}
+
+.content li {
+	float: left;
+	background: #CAE1FF;
+	color: #red;
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+	width: 33.33%;
+	font-size: 0.6rem;
+}
+
+.content li:nth-child(2) {
+	background: #9BCD9B;
+}
+
+.content li:nth-child(3) {
+	background: yellow;
+}
+
+button {
+	width: 6rem;
+	height: 1rem;
+	font-size: 0.6rem;
+	position: fixed;
+	bottom: 1rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 10;
+}
+
+.pageChange {
+	-webkit-animation-name: move;
+	/*规定动画完成一个周期所花费的秒或毫秒。默认是 0*/
+	-webkit-animation-duration: 10s;
+	/*规定动画被播放的次数。默认是 1。 infinite(循环播放)*/
+	/*-webkit-animation-iteration-count: infinite;*/
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes move {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-66.66%, 0);
+	}
+}
+
+.a_background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.a_background_top {
+	width: 100%;
+	height: 71.6%;
+	background-image: url("http://img.mukewang.com/55addf6900019d8f14410645.png");
+	background-size: 100% 100%;
+}
+
+.a_background_middle {
+	width: 100%;
+	height: 13.1%;
+	background-image: url("http://img.mukewang.com/55addf800001ff2e14410118.png");
+	background-size: 100% 100%;
+}
+
+.a_background_botton {
+	width: 100%;
+	height: 15.3%;
+	background-image: url("http://img.mukewang.com/55addfcb000189b314410138.png");
+	background-size: 100% 100%;
+}
+
+.boy {
+	width: 3.775rem;
+	height: 7.275rem;
+	background: url(http://img.mukewang.com/55ade248000198ae10550582.png) 0 -291px no-repeat;
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	/*animation:go 10s linear forwards;*/
+}
+
+@keyframes go {
+	from {
+		left: -10%;
+	}
+	to {
+		left: 50%;
+	}
+}
+
+.slowWalk {
+	/*规定 @keyframes 动画的名称。*/
+	-webkit-animation-name: person-slow;
+	/*规定动画完成一个周期所花费的秒或毫秒。默认是 0*/
+	-webkit-animation-duration: 950ms;
+	/*规定动画被播放的次数。默认是 1。 infinite(循环播放)*/
+	-webkit-animation-iteration-count: infinite;
+	/*动画切换的方式是一帧一帧的改变*/
+	-webkit-animation-timing-function: steps(1, start);
+	-moz-animation-name: person-slow;
+	-moz-animation-duration: 950ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: steps(1, start)
+}
+
+.slowFlolerWalk {
+       -webkit-animation-name: person-floler-slow;
+       -webkit-animation-duration: 950ms;
+       -webkit-animation-iteration-count: infinite;
+       -webkit-animation-timing-function: step-start;
+       -moz-animation-name: person-floler-slow;
+       -moz-animation-duration: 950ms;
+       -moz-animation-iteration-count: infinite;
+       -moz-animation-timing-function: step-start;
+   }
+   
+@-webkit-keyframes person-floler-slow {
+       0% {
+           background-position: -453px -0px;
+       }
+       25% {
+           background-position: -904px -0px;
+       }
+       50% {
+           background-position: -451px -0px;
+       }
+       75% {
+           background-position: -753px -0px;
+       }
+       100% {
+           background-position: -300px -0px;
+       }
+   }
+   
+   @-moz-keyframes person-floler-slow {
+       0% {
+           background-position: -453px -0px;
+       }
+       25% {
+           background-position: -904px -0px;
+       }
+       50% {
+           background-position: -451px -0px;
+       }
+       75% {
+           background-position: -753px -0px;
+       }
+       100% {
+           background-position: -300px -0px;
+       }
+   }
+
+.pauseWalk {
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+}
+
+@-webkit-keyframes person-slow {
+	0% {
+		background-position: -0px -291px;
+	}
+	25% {
+		background-position: -602px -0px;
+	}
+	50% {
+		background-position: -302px -291px;
+	}
+	75% {
+		background-position: -151px -291px;
+	}
+	100% {
+		background-position: -0px -291px;
+	}
+}
+
+@keyframes person-slow {
+	0% {
+		background-position: -0px -291px;
+	}
+	25% {
+		background-position: -602px -0px;
+	}
+	50% {
+		background-position: -302px -291px;
+	}
+	75% {
+		background-position: -151px -291px;
+	}
+	100% {
+		background-position: -0px -291px;
+	}
+}
+
+
+/*太阳*/
+
+.sun {
+	background: url("http://img.mukewang.com/55ade004000106c202010201.png") no-repeat;
+	position: absolute;
+	z-index: 1;
+	top: -30px;
+	height: 201px;
+	width: 201px;
+	right: 40%;
+	animation: rotate 30s linear;
+}
+
+@-webkit-keyframes rotate {
+	from {
+		transform: translateX(0) translateY(0);
+	}
+	to {
+		transform: translateX(-2000px) translateY(400px);
+	}
+}
+
+
+/*云*/
+
+.cloud {
+	z-index: 2;
+	position: absolute;
+}
+
+.cloud1 {
+	width: 181px;
+	height: 101px;
+	left: -5%;
+	top: 15%;
+	background: url("http://img.mukewang.com/55addfde0001aec501810101.png");
+	animation: cloud1 20s linear;
+}
+
+.cloud2 {
+	width: 301px;
+	height: 140px;
+	right: -5%;
+	background: url("http://img.mukewang.com/55addff500016df503010140.png");
+	animation: cloud2 60s linear;
+}
+@keyframes cloud1{
+	from{left:-5%}
+	to{left:100%}
+}
+@keyframes cloud2{
+	from{right:-5%}
+	to{right:100%}
+}
+
+/*页面2*/
+
+.b_background {
+	width: 100%;
+	height: 100%;
+	background-image: url("http://img.mukewang.com/55ade06f00015a0d14410901.png");
+	background-size: 100% 100%;
+	position: absolute;
+}
+
+.b_background_preload {
+	background: url("http://img.mukewang.com/55ade0be0001a37914410901.png") no-repeat -9999px -9999px;
+}
+
+.lamp-bright {
+	background-image: url("http://img.mukewang.com/55ade0be0001a37914410901.png");
+}
+
+
+/*商店*/
+
+.shop {
+	width: 39.5%;
+	height: 35.5%;
+	position: absolute;
+	left: 29%;
+	top: 36.5%;
+}
+
+.door {
+	position: absolute;
+	width: 32%;
+	height: 100%;
+	top: 32%;
+	height: 68%;
+	overflow: hidden;
+	left: 58.5%;
+}
+
+.door-left,
+.door-right {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+}
+
+.door-left {
+	left: 0%;
+	background: url(http://img.mukewang.com/55ade1140001050d00910231.png);
+	background-size: 100% 100%;
+}
+
+.door-right {
+	left: 50%;
+	background: url(http://img.mukewang.com/55ade12100019f5b00910231.png);
+	background-size: 100% 100%;
+}
+@keyframes doorLeft{
+	from{left:0%}
+	to{left:-50%;}
+}
+@keyframes doorRight{
+	from{left:50%}
+	to{left:100%;}
+}
+@keyframes doorLeft1{
+	from{left:-50%}
+	to{left:0%;}
+}
+@keyframes doorRight1{
+	from{left:100%}
+	to{left:50%;}
+}
+
+/*鸟*/
+
+.bird {
+	min-width: 91px;
+	min-height: 71px;
+	top: 10%;
+	position: absolute;
+	z-index: 10;
+	right: -91px;
+	background: url(http://img.mukewang.com/55ade1700001b38302730071.png) -182px 0px no-repeat;
+}
+.birdFly {
+    -webkit-animation-name: bird-slow;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-timing-function: step-start;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: bird-slow;
+    -moz-animation-duration: 400ms;
+    -moz-animation-timing-function: step-start;
+    -moz-animation-iteration-count: infinite;
+}
+/*鸟慢飞*/
+@-webkit-keyframes bird-slow {
+    /* 鸟飞的动作 */
+   0% {
+    background-position: -182px 0px;
+}
+50% {
+    background-position: 0px 0px;
+}
+75% {
+    background-position: -91px 0px;
+}
+100% {
+    background-position: -182px 0px;
+}
+    
+}
+
+@-moz-keyframes bird-slow {
+    /* 鸟飞的动作 */
+   0% {
+    background-position: -182px 0px;
+}
+50% {
+    background-position: 0px 0px;
+}
+75% {
+    background-position: -91px 0px;
+}
+100% {
+    background-position: -182px 0px;
+}
+    
+}
+.startRun{
+	transition:all 1s linear!important;
+}
+.startRun1{
+	transform: translateX(121px) scale(0.3,0.3);
+	opacity: 0.3;
+}
+.getOut1{
+	transition:all 1s linear!important;
+}
+.getOut{
+	transform: translateX(121px) scale(1,1);
+	opacity: 1;
+}
+/*第三幅*/
+.c_background {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+.c_background_top{
+    width: 100%;
+    height: 71.6%;
+    background-image: url("http://static.mukewang.com/img/55ade19b0001d92c14410645.png");
+    background-size: 100% 100%;
+}
+
+
+.c_background_middle{
+    width: 100%;
+    height: 13.1%;
+    background-image: url("http://static.mukewang.com/img/55ade1b3000135c114410118.png");
+    background-size: 100% 100%;
+}
+
+.c_background_botton{
+    width: 100%;
+    height: 15.3%;
+    background-image: url("http://static.mukewang.com/img/55ade1c30001db5d14410138.png");
+    background-size: 100% 100%;
+}
+
+/*小女孩*/
+
+.girl {
+    background: url(http://static.mukewang.com/img/55ade30d000100dc10570291.png) -755px -0px no-repeat;
+    position: absolute;
+    right: 40%;
+    top: 37%;
+    width: 151px;
+    height: 291px;
+}
+.girl-rotate {
+    -webkit-animation-name: girl-rotate;
+    -webkit-animation-duration: 850ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: step-start;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: girl-rotate;
+    -moz-animation-duration: 850ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: step-start;
+    -moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes girl-rotate {
+    0% {
+        background-position: -604px -0px;
+    }
+    16.7% {
+        background-position: -151px -0px;
+    }
+    33.4% {
+        background-position: -906px -0px;
+    }
+    50.1% {
+        background-position: -0px -0px;
+    }
+    66.8% {
+        background-position: -302px -0px;
+    }
+    83.5% {
+        background-position: -453px -0px;
+    }
+    100% {
+        background-position: -604px -0px;
+    }
+}
+
+@-moz-keyframes girl-rotate {
+    0% {
+        /*background-position: -604px -0px;*/
+    }
+    16.7% {
+        background-position: -151px -0px;
+    }
+    33.4% {
+        background-position: -906px -0px;
+    }
+    50.1% {
+        background-position: -0px -0px;
+    }
+    66.8% {
+        background-position: -302px -0px;
+    }
+    83.5% {
+        background-position: -453px -0px;
+    }
+    100% {
+        background-position: -604px -0px;
+    }
+}
+.boy-rotate {
+		animation:boy-rotate 850ms 1 step-start forwards!important;
+       
+   }
+   
+   @-webkit-keyframes boy-rotate {
+       0% {
+           background-position: -603px -291px;
+       }
+       16.7% {
+           background-position: -150px -0px;
+       }
+       33.4% {
+           background-position: -453px -291px;
+       }
+       50.1% {
+           background-position: -0px -0px;
+       }
+       66.8% {
+           background-position: -903px -291px;
+       }
+       83.5% {
+           background-position: -753px -291px;
+       }
+       100% {
+           background-position: -603px -291px;
+       }
+   }
+   
+   @-moz-keyframes boy-rotate {
+       0% {
+           /*background-position: -603px -291px;*/
+       }
+       16.7% {
+           background-position: -150px -0px;
+       }
+       33.4% {
+           background-position: -453px -291px;
+       }
+       50.1% {
+           background-position: -0px -0px;
+       }
+       66.8% {
+           background-position: -903px -291px;
+       }
+       83.5% {
+           background-position: -753px -291px;
+       }
+       100% {
+           background-position: -603px -291px;
+       }
+   }
+/*桥*/
+
+.bridge-bottom {
+    position: absolute;
+    width: 41%;
+    height: 24%;
+    left: 29.5%;
+    top: 76%;
+    overflow: hidden;
+    /*    -webkit-transform:perspective(8px) rotateX(.8deg); */
+}
+/*波浪水布局*/
+
+.water {
+    width: 100%;
+    height: 100%;
+}
+
+.water_1,
+.water_2,
+.water_3,
+.water_4 {
+    width: 100%;
+    position: absolute;
+    height: 50%;
+}
+
+.water_1 {
+    width: 131px;
+    height: 15px;
+    top: 13%;
+    left: 35%;
+    background: url(http://static.mukewang.com/img/55ade1e000010f2908540027.png) -261px -0px no-repeat;
+    animation:shake 10s linear infinite;
+}
+
+.water_2 {
+    width: 161px;
+    height: 9px;
+    top: 30%;
+    left: 45%;
+    background: url(http://static.mukewang.com/img/55ade1e000010f2908540027.png) -693px -0px no-repeat;
+    animation:shake 10s linear infinite;
+    animation-delay:1s;
+}
+
+.water_3 {
+    width: 261px;
+    height: 29px;
+    top: 50%;
+    left: 15%;
+    background: url(http://static.mukewang.com/img/55ade1e000010f2908540027.png) -0px -0px no-repeat;
+    animation:shake 10s linear infinite;
+    animation-delay:2s;
+}
+
+.water_4 {
+    width: 301px;
+    height: 12px;
+    top: 75%;
+    left: 30%;
+    background: url(http://static.mukewang.com/img/55ade1e000010f2908540027.png) -392px -0px no-repeat;
+    animation:shake 10s linear infinite;
+    animation-delay:3s;
+}
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-30px, 0px, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(30px, 0px, 0);
+    }
+}
+
+@-moz-keyframes shake {
+    0%, 100% {
+        -moz-transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -moz-transform: translate3d(-30px, 0px, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -moz-transform: translate3d(30px, 0px, 0);
+    }
+}
+
+
+/*星星*/
+
+.stars {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.stars > li {
+    position: absolute;
+    width: 30px;
+    height: 31px;
+    background-image: url("http://static.mukewang.com/img/55ade1fe00016b8900300031.png");
+    animation: flash 7s ease-in-out infinite alternate;
+}
+
+.stars1 {
+    top: 20%;
+    left: 30%;
+}
+
+.stars2 {
+    top: 15%;
+    left: 20%;
+}
+
+.stars3 {
+    top: 25%;
+    left: 85%;
+}
+
+.stars4 {
+    top: 30%;
+    left: 70%;
+}
+
+.stars5 {
+    top: 25%;
+    left: 20%;
+}
+
+.stars6 {
+    top: 10%;
+    left: 65%;
+    }
+    
+@-webkit-keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+/*雪花*/
+.snowflake {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}

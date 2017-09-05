@@ -1,0 +1,6 @@
+body { width: 16rem; margin: 0 auto; background-color: #fff; }
+.swiper-container { width: 16rem; height: 25rem; }
+.swiper-container .swiper-wrapper { width: 16rem; height: 25rem; }
+.swiper-container .swiper-wrapper .swiper-slide { width: 16rem; height: 25rem; text-align: center; }
+.swiper-container .swiper-wrapper .swiper-slide img { width: 16rem; }
+

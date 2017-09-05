@@ -1,0 +1,41 @@
+body { width: 16rem; margin: 0 auto; background-color: #fff; }
+
+#swiper1 { width: 16rem; height: 7rem;}
+#swiper1 .swiper-wrapper { width: 16rem; height: 7rem; }
+#swiper1 .swiper-wrapper .swiper-slide { width: 16rem; height: 7rem;}
+#swiper1 .swiper-wrapper .swiper-slide img { width: 16rem; height: 7rem; }
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom:0;
+}
+.swiper-pagination-bullet{
+	width:16px;height:16px;
+}
+.tabs{
+	margin-top:0.5rem;
+	width:16rem;
+	height:1.5rem;
+	background-color: #999999;
+}
+.tabs a{
+	font-size: 0.6rem;
+	color:#fff;
+	display: inline-block;
+	vertical-align: top;
+	width:2rem;
+	height:1.5rem;
+	text-align: center;
+	line-height: 1.5rem;
+}
+.active1{
+	background-color:red;
+	color:#fff;
+}
+#swiper2 .swiper-wrapper .swiper-slide a{
+	display: block;
+	text-align: left;
+	text-indent: 0.5rem;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	color:pink;
+}
+/*# sourceMappingURL=index.css.map */
