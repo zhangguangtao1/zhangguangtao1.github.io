@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>家的组成</title>
+		<meta name="Description" content="网页的描述"/>
+		<meta name="Keywords" content="网页的关键词"/>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/news.css" />
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="topHeader">
+				<!--这是图片logo到时候替换为你们自己设计的logo 图片大小尺寸为604*58;如果你们自己设计的图片尺寸不符合604*58;请把下面的width和height改为你们自己的图片尺寸-->
+				<a href="index.html" title="温馨之家">
+					<img src="images/logo.jpg" height="100"/>
+					<span>温馨之家</span>
+				</a>
+			</div>
+			<div class="nav">
+				<div class="navList">
+					<!--这是导航的分类如果要增加在后面追加a标签即可-->
+					<a href="index.html">首页</a>
+					<a href="about.html">关于家</a>
+					<a href="compose.html" class="on">家的组成</a>
+					<a href="homede.html">家的环境</a>
+				</div>
+			</div>
+		</div>
+		<div class="main clearfix">
+			<div class="mainRight">
+				<div class="mainContent">
+					<!--面包屑导航-->
+					<div class="breadNav">
+						<p>家的组成</p>
+						<div class="breadNavList">
+							<i class="iconfont">&#xe611;</i>
+							<span>当前位置：</span>
+							<a href="index.html">首页</a>
+							<code> > </code>
+							<a href="javascript:;">家的组成 </a>
+						</div>
+					</div>
+					<ul class="newsList">
+						<a href="compose_detail.html"><li>
+							<img src="images/compose01.jpg" width="288" height="222"/>
+							<div class="newsRight">
+								<h3>家庭成员</h3>
+								<p>家的最重要的组成部分就是家庭成员，这是家的灵魂所在，有了家庭成员的家才叫完整的家。完整的家庭成员更是家庭幸福的保证。</p>
+							</div>
+						</li></a>
+						<a href="compose_detail.html"><li>
+							<img src="images/compose02.jpg" width="288" height="222"/>
+							<div class="newsRight">
+								<h3>物质条件</h3>
+								<p>家的完整与否与物质条件也有很大的关系，物质是一个家庭生存最基本的要求，没有物质条件的保障就无从谈起家的幸福。物质条件主要包括房子，车子，家具等等。这些也是家的重要组成部分。</p>
+							</div>
+						</li></a>
+						<a href="compose_detail.html"><li>
+							<img src="images/compose03.jpg" width="288" height="222"/>
+							<div class="newsRight">
+								<h3>社会活动</h3>
+								<p>社会活动即家庭成员一起外出进行的集体的社会活动，这是家庭成员情感交流的非常重要的方式。</p>
+							</div>
+						</li></a>
+						<a href="compose_detail.html"><li>
+							<img src="images/compose04.jpg" width="288" height="222"/>
+							<div class="newsRight">
+								<h3>爱</h3>
+								<p>家之所以这么特殊，之所以是爱的源泉，正是因为它有一个非常重要的组成部分——爱。</p>
+							</div>
+						</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery1.8.3.js"></script>
+		<script type="text/javascript">
+			$(".newsList a").click(function(e){
+				var e = e || window.event;
+				e.preventDefault();
+				e.returnValue = true;
+				var index = $(this).index();
+				window.location.href = "compose_detail.html?id="+index;
+			})
+		</script>
+	</body>
+
+</html>

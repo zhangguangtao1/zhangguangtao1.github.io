@@ -1,0 +1,20 @@
+body{background-color:#f5f5f5;}
+.main{width:1200px;margin:0 auto;margin-top:20px;}
+/*右侧*/
+.mainContent{padding:25px;padding-bottom:0;border:1px solid #E5E5E5;background-color:#FFFFFF;}
+.breadNav{line-height:50px;border-bottom:2px solid #8773AA;font-size:0;}
+.breadNav p{display:inline-block;background-color:#8773AA;color:#FFFFFF;padding:0 40px;font-size:20px;vertical-align:top;}
+.breadNavList{float:right;font-size:12px;color:#a1a1a1;}
+.breadNavList a{color:#a1a1a1;}
+.breadNavList i{font-size:18px;}
+/*关于我们*/
+.aboutUs{margin-top:20px;padding-bottom:56px;}
+.aboutUs p{font-size:14px;color:#666666;line-height:1.6;margin:30px 0;}
+.aboutUs img{display:block;width:100%;}
+/*企业文化*/
+.aboutCulture{margin-top:20px;padding-bottom:56px;}
+.aboutCulture p{font-size:14px;color:#666666;line-height:30px;}
+.aboutCulture img{display:block;width:100%;}
+
+
+
